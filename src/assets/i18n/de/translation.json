@@ -1,0 +1,37 @@
+{
+    "navigation": {
+        "faqs": "FAQs",
+        "sample_received": "Muster erhalten"
+    },
+    "landing": {
+        "save_samples_title": "<bold>Muster sichern</bold> aus 2020, solange der Vorrat reicht!",
+        "good_deed_calendar_title": "Der 24guteTaten Adventskalender als Kundengeschenk",
+        "good_deed_calendar_description": "Mit jedem Kalender unterstützen Sie 24 gemeinnützige Projekte rund um die Welt. Für was Ihre Spende konkret eingesetzt wird, steht täglich hinter den Türchen. Die Projekte kommen aus den Bereichen Gesundheit, Bildung, Versorgung und Natur.<br/><br/>  Mit einer Spende tun Sie 24 mal etwas Gutes. Hier ein paar Beispiele:",
+        "good_deed_detail_education": "Eine Vorlesestunde für ein Kind in Deutschland",
+        "good_deed_detail_nutrition": "Eine Gemüsepflanze für eine Bauernfamilie in Guatemala",
+        "good_deed_detail_health": "Eine Vorsorgeuntersuchung für ein Kind in Malawi",
+        "good_deed_detail_nature": "5qm Palmölplantage werden in Malaysia renaturiert",
+        "contact_form_title": "An welche Adresse senden wir Ihnen am besten einen <bold>Muster-Kalender?</bold>",
+        "conatct_form_company": "Unternehmen",
+        "conatct_form_firstname": "Vorname",
+        "conatct_form_lastname": "Nachname",
+        "conatct_form_address": "Adresse",
+        "conatct_form_city": "Stadt",
+        "conatct_form_plz": "PLZ",
+        "conatct_form_land": "Land",
+        "conatct_form_telephone": "Telefon",
+        "conatct_form_email": "Email",
+        "conatct_form_submit": "Absenden",
+        "what_other_company_say_title": "Was sagen andere Unternehmen?",
+        "what_other_company_say_content": "„Ein Geschenk, das<br> inspiriert und richtig etwas<br> in der Welt bewegt.“",
+        "what_other_company_say_footer": "Übermitteln Sie ihren Kund*innen oder Mitarbeiter*innen weihnachtliche Grüße auf ganz einzigartige Weise.",
+        "order_sample_calendar": "Musterkalender bestellen",
+        "what_other_company_say_talker": "Patrick Dillenberger, Leiter Unternehmenskommunikation SHARE NOW",
+        "what_other_company_say_content2": "“Als Unternehmen tragen wir soziale Verantwortung und wollen konkrete Hilfe leisten. Deswegen haben wir unseren Mitarbeitenden zum Jahresausklang den 24 GUTE TATEN Adventskalender geschenkt. Eine Kollegin hat es ganz gut auf den Punkt gebracht: Endlich mal was sinnvolles statt Schokolade.”",
+        "last_year_project_title": "2020 wurden unter anderem diese Projekte umgesetzt:",
+        "last_year_project_nature": "419,553 Quadratmeter<br> verödete Palmölplantage<br> in Malaysia renaturiert",
+        "last_year_project_health": "80,277 Ruhepausen für<br> Eltern von krebskranken<br> Kindern in Deutschland",
+        "last_year_project_education": "20.977 Stunden Vorschule<br> für geflüchtete Kinder in<br> Jordanien",
+        "last_year_project_nutrition": "4.816 Meter<br> Wasserleitung für<br> Gemeinden im Irak"
+    }
+}
