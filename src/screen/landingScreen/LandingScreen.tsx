@@ -58,7 +58,8 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 2xl:w-1204p 2xl:pt-70p 2xl:pb-50p 2xl:pl-38p 2xl:flex-col
                 x:pt-80p xl:pl-0 xl:w-904p
                 lg:w-684p
-                md:w-586p">
+                md:w-586p
+                sm:w-full sm:p-5">
                 {/* Logo section */}
                 <div className="flex justify-between items-center 2xl:w-full xl:flex-wrap">
                     <div>
@@ -67,7 +68,8 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         </Link>
                     </div>
                     <div className="items-center flex justify-start 
-                        xl:order-last xl:w-full xl:justify-between">
+                        xl:order-last xl:w-full xl:justify-between
+                        sm:mt-5">
                         <Link to="/" >
                             <div className="text-xl text-gray-400 mx-4">Bekannt aus…</div>
                         </Link>
@@ -84,7 +86,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             <img src={logo_waz} alt={"waz"} />
                         </Link>
                     </div>
-                    <div className="hidden 2xl:block lg:mr-5">
+                    <div className="hidden 2xl:block">
                         <button onClick={() => {
                             setVisibleOfNavbar(!visibleOfNavbar)
                         }}>
@@ -116,6 +118,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 xl:w-904p
                 lg:w-684p
                 md:w-586p
+                sm:w-full
                 ">
                 <div className="w-470p relative
                     xl:w-745p xl:h-730p
@@ -138,7 +141,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             xl:mt-m686p xl:w-200p xl:h-200p xl:text-27p xl:leading-21p
                             lg:mt-m588p lg:mr-m33p lg:w-200p lg:h-200p lg:text-27p lg:leading-21p
                             md:mt-m433p md:w-170p md:h-170p md:mr-m21p md:text-22p
-                            sm:text-8p sm:leading-none sm:w-70p sm:h-70p"
+                            sm:text-8p sm:leading-none sm:w-70p sm:h-70p sm:mt-m433p"
                             style={{
                                 backgroundImage:`url(${green_circle})`,
                             }}
@@ -155,17 +158,17 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                 2xl:mt-18p
                                 xl:text-28p xl:mt-46p
                                 lg:text-36p lg:leading-36p lg:px-24 lg:mt-50p
-                                sm:text-15p sm:mt-4">
+                                sm:text-18p sm:mt-4 sm:px-0 sm:text-18p sm:leading-24p">
                                 <Trans
                                     i18nKey="landing.save_samples_title"
                                     components={{ bold: <strong /> }}
                                 />
                             </div>
-                            <p className="text-primary font-bold text-55p leading-none mt-30p 
+                            <div className="text-primary font-bold text-55p leading-none mt-30p 
                                 2xl:mt-26p
                                 xl:mt-18p xl:leading-55p
                                 lg:leading-55p
-                                sm:text-24p">
+                                sm:text-30p sm:leading-36p">
                                 <div className="xl:hidden">
                                     <Trans
                                         i18nKey="landing.good_deed_calendar_title"
@@ -178,20 +181,20 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                         components={{ br: <span/> }}
                                     />
                                 </div>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className="px-62p flex-1 flex mt-80p 
                         2xl:mt-70p
                         xl:px-0
-                        ">
+                        sm:mt-10 sm:px-5">
                         <div className="flex flex-1 
                             lg:flex-col
-                            sm:flex-col sm:mt-10">
+                            sm:flex-col">
                             <p className="font-bold text-black text-18p flex-1 leading-none 
                                 xl:text-28p xl:leading-28p
                                 lg:text-center lg:text-36p lg:leading-36p
-                                sm:text-15p">
+                                sm:text-18p sm:leading-24p">
                                 <Trans
                                     i18nKey="landing.good_deed_calendar_description"
                                     components={{ br: <br/> }}
@@ -199,36 +202,40 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             </p>
                             <div className="flex flex-col flex-1 ml-2 text-18p font-semibold justify-between 
                                 lg:text-36p lg:leading-36p
-                                sm:mt-10 sm:ml-0 sm:text-15p">
+                                sm:mt-0 sm:ml-0 sm:text-15p">
                                 <div className="flex items-start items-center
                                     lg:mt-94p
-                                    md:flex-col md:items-start">
-                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p" src={contact_form_ic.ic_bildung} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5">
+                                    md:flex-col md:items-start
+                                    sm:mt-10 sm:flex-row">
+                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p sm:w-33p sm:h-33p" src={contact_form_ic.ic_bildung} alt={"green_check_img"} />
+                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5 sm:text-18p sm:leading-24p">
                                         {t('landing.good_deed_detail_education')}
                                     </p>
                                 </div>
                                 <div className="flex items-start items-center mt-3
                                     lg:mt-94p
-                                    md:flex-col md:items-start md:mt-35p">
-                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p" src={contact_form_ic.ic_nutrition} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5">
+                                    md:flex-col md:items-start md:mt-35p
+                                    sm:mt-5 sm:flex-row">
+                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p sm:w-33p sm:h-33p" src={contact_form_ic.ic_nutrition} alt={"green_check_img"} />
+                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5 sm:text-18p sm:leading-24p">
                                         {t('landing.good_deed_detail_nutrition')}
                                     </p>
                                 </div>
                                 <div className="flex items-start items-center mt-3
                                     lg:mt-94p
-                                    md:flex-col md:items-start md:mt-35p">
-                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p" src={contact_form_ic.ic_health} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5">
+                                    md:flex-col md:items-start md:mt-35p
+                                    sm:mt-5 sm:flex-row">
+                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p sm:w-33p sm:h-33p" src={contact_form_ic.ic_health} alt={"green_check_img"} />
+                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5 sm:text-18p sm:leading-24p">
                                         {t('landing.good_deed_detail_health')}
                                     </p>
                                 </div>
                                 <div className="flex items-start items-center mt-3
                                     lg:mt-94p
-                                    md:flex-col md:items-start md:mt-35p">
-                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p" src={contact_form_ic.ic_nature} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5">
+                                    md:flex-col md:items-start md:mt-35p
+                                    sm:mt-5 sm:flex-row">
+                                    <img className="w-33p h-33p mt-1.5 mr-2 xl:w-45p xl:h-45p lg:w-60p lg:h-60p sm:w-33p sm:h-33p" src={contact_form_ic.ic_nature} alt={"green_check_img"} />
+                                    <p className="leading-none ml-20p xl:text-28p xl:leading-28p lg:ml-50p md:ml-5 sm:text-18p sm:leading-24p">
                                         {t('landing.good_deed_detail_nature')}
                                     </p>
                                 </div>
@@ -286,7 +293,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         xl:h-1250p xl:py-51p xl:px-79p
                         lg:w-full lg:mt-20 lg:px-70p lg:py-43p lg:h-1147p
                         md:py-60p
-                        sm:mt-5 sm:w-full">
+                        sm:mt-5 sm:w-full sm:p-7 sm:h-auto">
                     <div className="text-white text-24p font-semibold text-center  
                         xl:text-36p xl:leading-36p
                         lg:text-33p lg:leading-33p
@@ -296,7 +303,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             components={{bold: <strong />}}
                         />
                     </div>
-                    <form className="flex flex-col flex-1 mt-30p lg:mt-43p md:mt-60p sm:mx-0" onSubmit={onSubmit}>
+                    <form className="flex flex-col flex-1 mt-30p lg:mt-43p md:mt-60p sm:mx-0 sm:mt-5" onSubmit={onSubmit}>
                         <input 
                             className="flex-1 text-18p px-15p rounded xl:text-28p lg:text-24p sm:text-15p sm:p-2" 
                             id="company" type="text" 
@@ -379,9 +386,9 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         />
                         <button 
                             className="py-26p mt-30p text-xl text-white bg-secondary text-21p font-semibold rounded
-                            xl:text-28p xl:py-45p
-                            lg:mt-40p lg:h-105p
-                            sm:text-18p sm:p-3" 
+                                xl:text-28p xl:py-45p
+                                lg:mt-40p lg:h-105p
+                                sm:text-18p sm:p-2 sm:h-auto"
                             id="submit" 
                             type="submit"
                         >
@@ -393,7 +400,8 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
 
             <div className="hidden mx-auto
                 lg:w-684p lg:h-820p lg:mt-30p lg:block
-                md:w-586p md:h-700p">
+                md:w-586p md:h-700p
+                sm:w-full sm:h-380p">
                 <img className="w-full h-full object-cover" 
                     src={gift_img} alt=""/>
             </div>
@@ -403,7 +411,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 xl:w-904p xl:py-90p
                 lg:w-684p
                 md:w-586p
-                sm:py-5">
+                sm:w-full sm:py-5">
                 <div className="w-1685p mx-auto
                     2xl:w-auto 2xl:px-52p
                     sm:px-5">
@@ -424,7 +432,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                 xl:text-55p xl:mt-5p xl:leading-55p
                                 lg:text-55p lg:px-45p lg:mt-30p lg:leading-55p
                                 md:px-0
-                                sm:text-24p">
+                                sm:text-24p sm:leading-27p">
                                 <Trans
                                     i18nKey="landing.what_other_company_say_content"
                                     components={{ br: <br/> }}
@@ -440,7 +448,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                 <div className="text-21p font-extrabold text-white py-24p px-35p rounded bg-secondary h-1 flex items-center justify-center
                                     xl:text-28p xl:px-65p xl:py-50p xl:leading-28p
                                     lg:px-60p lg:py-42p lg:text-28p
-                                    sm:text-15p">
+                                    sm:text-15p sm:p-3 sm:h-auto">
                                     {t('landing.order_sample_calendar')}
                                 </div>
                             </ScrollLink>
@@ -448,6 +456,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         <div className="flex flex-1 content-end mr-40p 
                             2xl:mr-0
                             xl:w-full xl:h-1 xl:px-65p xl:pt-65p
+                            sm:w-full sm:px-0
                             ">
                             <img src={banner_img} className="object-scale-down object-bottom h-auto w-full"/>
                         </div>
@@ -456,7 +465,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         2xl:px-52p 2xl:py-42p
                         xl:flex-col xl:py-70p
                         lg:flex-wrap lg:px-45p lg:py-70p
-                        sm:px-5">
+                        sm:px-5 sm:py-5">
                         <p className="leading-tight text-primary mr-94p flex-2 font-bold text-24p mr-5 
                             xl:text-28p xl:leading-28p
                             lg:w-full lg:text-28p lg:leading-28p
@@ -477,7 +486,8 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 2xl:mt-57p 2xl:w-1204p 2xl:h-765p
                 xl:w-904p xl:flex-col xl:h-auto
                 lg:w-684p lg:mt-77p
-                md:w-586p">
+                md:w-586p
+                sm:w-full sm:mt-10">
                 <img className="w-1/3 h-full object-cover
                     2xl:w-1/2 
                     xl:w-full xl:h-1056p
@@ -486,19 +496,21 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 <div className="w-1/3 flex flex-col pl-145p 
                     2xl:w-1/2 2xl:pl-45p
                     xl:w-full xl:py-94p
-                    lg:pt-0 lg:pb-43p">
+                    lg:pt-0 lg:pb-43p
+                    sm:w-full sm:px-5">
                     <div className="leading-none text-30p font-extrabold text-primary text-center
                         xl:text-42p
-                        lg:text-36p">
+                        lg:text-36p
+                        sm:text-24p">
                         {t('landing.last_year_project_title')}
                     </div>
                     <div className="text-20p mt-27p sm:text-18p">
                         <div className="flex items-center">
-                            <img src={contact_form_ic.ic_nature_x2} className="h-83p w-83p xl:w-130p xl:h-130p sm:w-16 sm:h-16"/>
+                            <img src={contact_form_ic.ic_nature_x2} className="h-83p w-83p xl:w-130p xl:h-130p sm:w-14 sm:h-14"/>
                             <div className="text-primary leading-none ml-2 
                                 xl:text-36p xl:leading-36p
                                 lg:text-22p
-                                sm:text-15p">
+                                sm:text-15p sm:leading-17p">
                                 <Trans
                                     i18nKey="landing.last_year_project_nature"
                                     components={{ br: <br/> }}
@@ -506,13 +518,11 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             </div>
                         </div>
                         <div className="flex items-center mt-5">
-                            <img src={contact_form_ic.ic_health_x2} className="h-83p w-83p xl:w-130p xl:h-130p sm:w-16 
-                                
-                                sm:h-16"/>
+                            <img src={contact_form_ic.ic_health_x2} className="h-83p w-83p xl:w-130p xl:h-130p sm:w-14 sm:h-14"/>
                             <div className="text-primary leading-none ml-2
                                 xl:text-36p xl:leading-36p
                                 lg:text-22p
-                                sm:text-15p">
+                                sm:text-15p sm:leading-17p">
                                 <Trans
                                     i18nKey="landing.last_year_project_health"
                                     components={{ br: <br/> }}
@@ -520,12 +530,11 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             </div>
                         </div>
                         <div className="flex items-center mt-5">
-                            <img src={contact_form_ic.ic_bildung_x2} className="h-83p w-83p xl:w-130p xl:h-130p sm:w-16 
-                                sm:h-16"/>
+                            <img src={contact_form_ic.ic_bildung_x2} className="h-83p w-83p xl:w-130p xl:h-130p sm:w-14 sm:h-14"/>
                             <div className="text-primary leading-none ml-2
                                 xl:text-36p xl:leading-36p
                                 lg:text-22p
-                                sm:text-15p">
+                                sm:text-15p sm:leading-17p">
                                 <Trans
                                     i18nKey="landing.last_year_project_education"
                                     components={{ br: <br/> }}
@@ -533,11 +542,11 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             </div>
                         </div>
                         <div className="flex items-center mt-5">
-                            <img src={contact_form_ic.ic_nutrition_x2} className="h-83p w-83p xl:w-130p xl:h-130p"/>
+                            <img src={contact_form_ic.ic_nutrition_x2} className="h-83p w-83p xl:w-130p xl:h-130p sm:w-14 sm:h-14"/>
                             <div className="text-primary leading-none ml-2 
                                 xl:text-36p xl:leading-36p
                                 lg:text-22p
-                                sm:text-15p">
+                                sm:text-15p sm:leading-17p">
                                 <Trans
                                     i18nKey="landing.last_year_project_nutrition"
                                     components={{ br: <br/> }}
@@ -549,7 +558,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             xl:text-28p xl:px-65p xl:py-40p xl:leading-28p xl:mt-135p
                             lg:mt-135p lg:py-30p lg:text-28p
                             md:mt-100p
-                            sm:text-15p">
+                            sm:text-15p sm:w-full sm:h-auto sm:p-2 sm:mt-10">
                             <ScrollLink to="contact_form" smooth={'easeOutQuart'} duration={1000}>
                                 {t('landing.order_sample_calendar')}
                             </ScrollLink>
@@ -575,32 +584,36 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
             }
             {/* footer */}
             <div className="bg-primary h-263p flex
-                xl:h-560p">
+                xl:h-560p
+                sm:h-auto sm:py-10">
                 <div className="w-1310p h-160p mx-auto my-auto flex justify-between 
                     2xl:w-1138p
-                    xl:flex-col xl:h-380p">
+                    xl:flex-col xl:h-380p
+                    sm:h-auto">
                     <div className="text-22p font-regular text-white mt-87p w-2/5
                         xl:mt-0 xl:text-center xl:w-full
-                        xl:text-32p">
+                        xl:text-32p
+                        sm:text-18p sm:mt-5">
                         {t('footer.Impressum')} | {t('footer.data_protection')}
                     </div>
                     {/* logos */}
                     <div className="flex flex-col items-center justify-self-center
                          xl:order-first">
                         <div>
-                            <img className="w-92p h-92p xl:w-127p xl:h-127p" src={footer_logos.logo}/>
+                            <img className="w-92p h-92p xl:w-127p xl:h-127p sm:w-92p sm:h-92p" src={footer_logos.logo}/>
                         </div>
                         <div className="flex mt-23p">
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p" src={footer_logos.logo_facebook}/></a>
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p" src={footer_logos.logo_instagram}/></a>
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p" src={footer_logos.logo_youtube}/></a>
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p" src={footer_logos.logo_twitter}/></a>
+                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_facebook}/></a>
+                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_instagram}/></a>
+                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_youtube}/></a>
+                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_twitter}/></a>
                         </div>
                     </div>
                     {/* end logos */}
                     <div className="text-22p font-regular text-white mt-87p w-2/5 text-right
                         xl:mt-0 xl:text-center xl:w-full
-                        xl:text-32p">
+                        xl:text-32p
+                        sm:text-18p sm:mt-5">
                         {t('footer.contact')}
                     </div>
                 </div>
