@@ -57,7 +57,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 2xl:w-1204p 2xl:pt-70p 2xl:pb-50p 2xl:pl-38p
                 x:pt-80p xl:pl-0 xl:w-904p
                 lg:w-684p
-                sm:p-2">
+                md:w-586p">
                 {/* Logo section */}
                 <div className="flex justify-between items-center lg:w-full">
                     <div>
@@ -114,10 +114,12 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
             <div className="w-1685p mx-auto flex flex-wrap h-825p 
                 2xl:h-auto 2xl:w-1204p
                 xl:w-904p
-                lg:w-684p">
+                lg:w-684p
+                md:w-586p">
                 <div className="w-470p
                     xl:w-745p xl:h-730p
-                    lg:w-full lg:h-674p">
+                    lg:w-full lg:h-674p
+                    md:h-576p">
                     <img src={contact_form_img} className="object-cover w-full h-full"/>
                 </div>
                 <div className="flex flex-col w-725p
@@ -127,8 +129,9 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         <div className="leading-4 text-white text-18p font-extrabold text-center flex items-center justify-center transform rotate-12
                             float-right bg-center bg-no-repeat bg-contain w-135p h-135p mr-20p
                             2xl:mt-m37p
-                            xl:mt-m686p
+                            xl:mt-m686p xl:w-200p xl:h-200p xl:text-27p xl:leading-21p
                             lg:mt-m588p lg:mr-m33p lg:w-200p lg:h-200p lg:text-27p lg:leading-21p
+                            md:mt-m433p md:w-170p md:h-170p md:mr-m21p md:text-22p
                             sm:text-8p sm:leading-none sm:w-70p sm:h-70p"
                             style={{
                                 backgroundImage:`url(${green_circle})`,
@@ -144,6 +147,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             sm:px-8">
                             <div className="text-20p text-accent font-semibold mt-60p 
                                 2xl:mt-18p
+                                xl:text-28p
                                 lg:text-36p lg:leading-36p lg:px-24 lg:mt-50p
                                 sm:text-15p sm:mt-4">
                                 <Trans
@@ -189,30 +193,34 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                 lg:text-36p lg:leading-36p
                                 sm:mt-10 sm:ml-0 sm:text-15p">
                                 <div className="flex items-start items-center
-                                    lg:mt-94p">
+                                    lg:mt-94p
+                                    md:flex-col md:items-start">
                                     <img className="mt-1.5 mr-2 lg:w-60p lg:h-60p" src={contact_form_ic.ic_bildung} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p lg:ml-50p">
+                                    <p className="leading-none ml-20p lg:ml-50p md:ml-5">
                                         {t('landing.good_deed_detail_education')}
                                     </p>
                                 </div>
                                 <div className="flex items-start items-center mt-3
-                                    lg:mt-94p">
+                                    lg:mt-94p
+                                    md:flex-col md:items-start md:mt-35p">
                                     <img className="mt-1.5 mr-2 lg:w-60p lg:h-60p" src={contact_form_ic.ic_nutrition} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p lg:ml-50p">
+                                    <p className="leading-none ml-20p lg:ml-50p md:ml-5">
                                         {t('landing.good_deed_detail_nutrition')}
                                     </p>
                                 </div>
                                 <div className="flex items-start items-center mt-3
-                                    lg:mt-94p">
+                                    lg:mt-94p
+                                    md:flex-col md:items-start md:mt-35p">
                                     <img className="mt-1.5 mr-2 lg:w-60p lg:h-60p" src={contact_form_ic.ic_health} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p lg:ml-50p">
+                                    <p className="leading-none ml-20p lg:ml-50p md:ml-5">
                                         {t('landing.good_deed_detail_health')}
                                     </p>
                                 </div>
                                 <div className="flex items-start items-center mt-3
-                                    lg:mt-94p">
+                                    lg:mt-94p
+                                    md:flex-col md:items-start md:mt-35p">
                                     <img className="mt-1.5 mr-2 lg:w-60p lg:h-60p" src={contact_form_ic.ic_nature} alt={"green_check_img"} />
-                                    <p className="leading-none ml-20p lg:ml-50p">
+                                    <p className="leading-none ml-20p lg:ml-50p md:ml-5">
                                         {t('landing.good_deed_detail_nature')}
                                     </p>
                                 </div>
@@ -268,6 +276,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                     className="flex bg-primary flex-col contain justify-between px-52p py-30p  w-490p h-825p
                         2xl:w-full 2xl:mt-60p
                         lg:w-full lg:mt-20 lg:px-70p lg:py-43p lg:h-1147p
+                        md:py-60p
                         sm:mt-5 sm:w-full">
                     <div className="text-white text-24p font-semibold text-center 
                         lg:text-33p lg:leading-33p
@@ -277,7 +286,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             components={{bold: <strong />}}
                         />
                     </div>
-                    <form className="flex flex-col flex-1 mt-30p lg:mt-43p sm:mx-0" onSubmit={onSubmit}>
+                    <form className="flex flex-col flex-1 mt-30p lg:mt-43p md:mt-60p sm:mx-0" onSubmit={onSubmit}>
                         <input 
                             className="flex-1 text-18p px-15p rounded lg:text-24p sm:text-15p sm:p-2" 
                             id="company" type="text" 
@@ -371,7 +380,8 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
             </div>
 
             <div className="hidden mx-auto
-                lg:w-684p lg:h-820p lg:mt-30p lg:block">
+                lg:w-684p lg:h-820p lg:mt-30p lg:block
+                md:w-586p md:h-700p">
                 <img className="w-full h-full object-cover" 
                     src={gift_img} alt=""/>
             </div>
@@ -380,13 +390,15 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 2xl:w-1204p 2xl:mt-27p 2xl:py-70p
                 xl:w-904p xl:py-90p
                 lg:w-684p
+                md:w-586p
                 sm:py-5">
                 <div className="w-1685p mx-auto
                     2xl:w-auto 2xl:px-52p
                     sm:px-5">
                     <div className="flex justify-center 
                         xl:flex-col
-                        lg:flex-wrap sm:flex-col">
+                        lg:flex-wrap 
+                        sm:flex-col">
                         <div className="text-white ml-94p w-614p
                             2xl:ml-0 2xl:w-502p
                             xl:w-full xl:text-center
@@ -398,6 +410,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             </p>
                             <p className="text-42p leading-none font-bold mt-35p 
                                 lg:text-55p lg:px-45p lg:mt-30p lg:leading-55p
+                                md:px-0
                                 sm:text-24p">
                                 <Trans
                                     i18nKey="landing.what_other_company_say_content"
@@ -446,7 +459,8 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
             <div className="flex items-center mx-auto
                 2xl:mt-57p 2xl:w-1204p 2xl:h-765p
                 xl:w-904p xl:flex-col xl:h-auto
-                lg:w-684p mt-77p">
+                lg:w-684p lg:mt-77p
+                md:w-586p">
                 <img className="w-1/3 h-full object-cover
                     2xl:w-1/2 
                     xl:w-full xl:h-1056p
@@ -510,6 +524,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         </div>
                         <div className="p-4 mt-57p text-21p font-extrabold text-white bg-secondary w-full text-center cursor-pointer rounded 
                             lg:mt-135p lg:py-30p lg:text-28p
+                            md:mt-100p
                             sm:text-15p">
                             <ScrollLink to="contact_form" smooth={'easeOutQuart'} duration={1000}>
                                 {t('landing.order_sample_calendar')}
@@ -542,26 +557,26 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                     xl:flex-col xl:h-380p">
                     <div className="text-22p font-regular text-white mt-87p w-2/5
                         xl:mt-0 xl:text-center xl:w-full
-                        lg:text-32p">
+                        xl:text-32p">
                         {t('footer.Impressum')} | {t('footer.data_protection')}
                     </div>
                     {/* logos */}
                     <div className="flex flex-col items-center justify-self-center
                          xl:order-first">
                         <div>
-                            <img className="lg:w-127p lg:h-127p" src={footer_logos.logo}/>
+                            <img className="xl:w-127p xl:h-127p" src={footer_logos.logo}/>
                         </div>
                         <div className="flex mt-23p">
-                            <a className="mx-5p" href="#"><img className="lg:w-56p lg:h-56p" src={footer_logos.logo_facebook}/></a>
-                            <a className="mx-5p" href="#"><img className="lg:w-56p lg:h-56p" src={footer_logos.logo_instagram}/></a>
-                            <a className="mx-5p" href="#"><img className="lg:w-56p lg:h-56p" src={footer_logos.logo_youtube}/></a>
-                            <a className="mx-5p" href="#"><img className="lg:w-56p lg:h-56p" src={footer_logos.logo_twitter}/></a>
+                            <a className="mx-5p" href="#"><img className="xl:w-56p xl:h-56p" src={footer_logos.logo_facebook}/></a>
+                            <a className="mx-5p" href="#"><img className="xl:w-56p xl:h-56p" src={footer_logos.logo_instagram}/></a>
+                            <a className="mx-5p" href="#"><img className="xl:w-56p xl:h-56p" src={footer_logos.logo_youtube}/></a>
+                            <a className="mx-5p" href="#"><img className="xl:w-56p xl:h-56p" src={footer_logos.logo_twitter}/></a>
                         </div>
                     </div>
                     {/* end logos */}
                     <div className="text-22p font-regular text-white mt-87p w-2/5 text-right
                         xl:mt-0 xl:text-center xl:w-full
-                        lg:text-32p">
+                        xl:text-32p">
                         {t('footer.contact')}
                     </div>
                 </div>
