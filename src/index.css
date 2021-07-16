@@ -89,7 +89,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+    background-color: gray;
+}
+
 .app-container {
+    background-color: white;
     max-width: 1920px;
 }
 
