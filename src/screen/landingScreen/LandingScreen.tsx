@@ -16,6 +16,7 @@ import YoutubePopupComponent from "@component/YoutubePopupComponent";
 import "./LandingScreen.css";
 import Carousel from 'react-multi-carousel';
 import * as green_logos from "@assets/img/blue_logo";
+import * as footer_logos from "@assets/img/footer_logo";
 import "react-multi-carousel/lib/styles.css";
 import CalendarContactModel from "@model/CalendarContact.model";
 import { useTranslation, Trans } from 'react-i18next';
@@ -52,7 +53,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
     return (
         <div className="app-container mx-auto" style={{ fontFamily: "Barlow" }}>
             {/* Nav bar */}
-            <div className="container items-center mx-auto flex pt-42p pb-63p 
+            <div className="w-1685p items-center mx-auto flex pt-42p pb-63p 
                 lg:flex-wrap
                 sm:p-2">
                 {/* Logo section */}
@@ -107,8 +108,8 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                     </div>
                 </div>
             </div>
-
-            <div className="container mx-auto flex flex-wrap h-825p 2xl:h-auto">
+            {/* End navbar */}
+            <div className="w-1685p mx-auto flex flex-wrap h-825p 2xl:h-auto">
                 <div className="lg:hidden sm:block sm:w-full" style={{width:"470px"}}>
                     <img src={contact_form_img} className="object-cover w-full h-full"/>
                 </div>
@@ -322,7 +323,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
 
             <div className="bg-primary py-107p mt-77p
                 sm:py-5">
-                <div className="container mx-auto sm:px-5">
+                <div className="w-1685p mx-auto sm:px-5">
                     <div className="flex justify-center lg:flex-wrap sm:flex-col">
                         <div className="text-white ml-94p w-614p lg:w-full sm:ml-0">
                             <p className="font-bold text-24p
@@ -426,7 +427,31 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                     />
                 ) : null
             } */}
-            
+            {/* footer */}
+            <div className="bg-primary h-263p flex">
+                <div className="w-1310p h-160p mx-auto my-auto flex justify-between ">
+                    <div className="text-22p font-regular text-white mt-87p w-2/5">
+                        {t('footer.Impressum')} | {t('footer.data_protection')}
+                    </div>
+                    {/* logos */}
+                    <div className="flex flex-col items-center justify-self-center">
+                        <div>
+                            <img src={footer_logos.logo}/>
+                        </div>
+                        <div className="flex mt-23p">
+                            <a className="mx-5p" href="#"><img src={footer_logos.logo_facebook}/></a>
+                            <a className="mx-5p" href="#"><img src={footer_logos.logo_instagram}/></a>
+                            <a className="mx-5p" href="#"><img src={footer_logos.logo_youtube}/></a>
+                            <a className="mx-5p" href="#"><img src={footer_logos.logo_twitter}/></a>
+                        </div>
+                    </div>
+                    {/* end logos */}
+                    <div className="text-22p font-regular text-white mt-87p w-2/5 text-right">
+                        {t('footer.contact')}
+                    </div>
+                </div>
+            </div>
+            {/* end footer */}
         </div>
     )
 }

@@ -33,5 +33,10 @@
         "last_year_project_health": "80,277 Ruhepausen für<br> Eltern von krebskranken<br> Kindern in Deutschland",
         "last_year_project_education": "20.977 Stunden Vorschule<br> für geflüchtete Kinder in<br> Jordanien",
         "last_year_project_nutrition": "4.816 Meter<br> Wasserleitung für<br> Gemeinden im Irak"
+    },
+    "footer": {
+        "Impressum": "Impressum",
+        "data_protection": "Datenschutzerklärung",
+        "contact": "Kontakt"
     }
 }
