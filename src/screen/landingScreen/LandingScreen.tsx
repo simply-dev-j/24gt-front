@@ -9,6 +9,7 @@ import contact_form_img from "@assets/img/contact_form_img.png";
 import banner_img from "@assets/img/banner_img.png";
 import gift_img from "@assets/img/gift_img.png";
 import gift2_img from "@assets/img/gift2_img.png";
+import youtube_button from "@assets/img/youtube_button.png";
 import green_circle from "@assets/img/green_circle.png";
 import { Link } from "react-router-dom";
 import * as contact_form_ic from "@assets/img/contact_form_ic";
@@ -30,7 +31,7 @@ export interface LandingScreenProps extends BaseProps {
 const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: LandingScreenProps) => {
 
     const [visibleOfNavbar, setVisibleOfNavbar] = React.useState(false);
-    const [videoShow, setVideoShow] = React.useState(true);
+    const [videoShow, setVideoShow] = React.useState(false);
     const [contactForm, setContactForm] = React.useState(new CalendarContactModel());
     const {t} = useTranslation();
     const responsive = {
@@ -114,12 +115,18 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 2xl:h-auto 2xl:w-1204p
                 xl:w-904p
                 lg:w-684p
-                md:w-586p">
-                <div className="w-470p
+                md:w-586p
+                ">
+                <div className="w-470p relative
                     xl:w-745p xl:h-730p
                     lg:w-full lg:h-674p
                     md:h-576p">
                     <img src={contact_form_img} className="object-cover w-full h-full"/>
+                    <div className="absolute top-0 left-0 w-full h-full flex">
+                        <button className="m-auto">
+                            <img src={youtube_button} alt="" onClick={() => setVideoShow(true)}/>
+                        </button>
+                    </div>
                 </div>
                 <div className="flex flex-col w-725p
                     xl:w-full
@@ -558,14 +565,14 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 </div>
                 
             </div>
-            {/* {
+            {
                 videoShow ? (
                     <YoutubePopupComponent
                         url={"https://www.youtube.com/watch?v=G-kQara25LU"}
                         onClose={() => setVideoShow(false)}
                     />
                 ) : null
-            } */}
+            }
             {/* footer */}
             <div className="bg-primary h-263p flex
                 xl:h-560p">

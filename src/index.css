@@ -117,3 +117,9 @@
         max-width: 640px;
     }
 }
+
+@media (max-width: 639px) {
+    .app-container {
+        max-width: 100%;
+    }
+}
