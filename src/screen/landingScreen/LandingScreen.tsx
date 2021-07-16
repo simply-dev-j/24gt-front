@@ -54,29 +54,19 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
         <div className="app-container mx-auto" style={{ fontFamily: "Barlow" }}>
             {/* Nav bar */}
             <div className="w-1685p items-center mx-auto flex pt-42p pb-63p 
-                2xl:w-1204p 2xl:pt-70p 2xl:pb-50p 2xl:pl-38p
+                2xl:w-1204p 2xl:pt-70p 2xl:pb-50p 2xl:pl-38p 2xl:flex-col
                 x:pt-80p xl:pl-0 xl:w-904p
                 lg:w-684p
                 md:w-586p">
                 {/* Logo section */}
-                <div className="flex justify-between items-center lg:w-full">
+                <div className="flex justify-between items-center 2xl:w-full xl:flex-wrap">
                     <div>
                         <Link to="/" >
                             <img src={logo} alt={"logo"} className="sm:w-14"/>
                         </Link>
                     </div>
-                    <div className="hidden lg:block lg:mr-5">
-                        <button onClick={() => {
-                            setVisibleOfNavbar(!visibleOfNavbar)
-                        }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div className={"flex flex-1 lg:flex-col " + (!visibleOfNavbar ? "lg:hidden" : "")}>
-                    <div className="items-center flex justify-start lg:flex-col">
+                    <div className="items-center flex justify-start 
+                        xl:order-last xl:w-full xl:justify-between">
                         <Link to="/" >
                             <div className="text-xl text-gray-400 mx-4">Bekannt aus…</div>
                         </Link>
@@ -93,10 +83,19 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             <img src={logo_waz} alt={"waz"} />
                         </Link>
                     </div>
-
-
+                    <div className="hidden 2xl:block lg:mr-5">
+                        <button onClick={() => {
+                            setVisibleOfNavbar(!visibleOfNavbar)
+                        }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div className={"flex flex-1 2xl:flex-col " + (!visibleOfNavbar ? "2xl:hidden" : "")}>
                     {/* Action section */}
-                    <div className="items-center flex justify-end flex-1 lg:flex-col">
+                    <div className="items-center flex justify-end flex-1 2xl:flex-col">
                         <Link to="/" className="inline-block mr-1">
                             <div className="text-18 font-semibold p-5">
                                 {t("navigation.faqs")}
