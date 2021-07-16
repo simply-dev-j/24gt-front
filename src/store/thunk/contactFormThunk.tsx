@@ -11,10 +11,10 @@ export const ACTION_API_CONTACT_FORM_SUBMIT = (
     await SheetUtil.submitContactForm(contactForm)
     .then(
         result => {
-
+            dispatch(AppStateReducerSlice.actions.ACTION_API_SUBMIT_CONTACT_success({}));
         },
         error => {
-
+            dispatch(AppStateReducerSlice.actions.ACTION_API_SUBMIT_CONTACT_failed({}));
         }
     )
     .finally(

@@ -14,6 +14,7 @@ import green_circle from "@assets/img/green_circle.png";
 import { Link } from "react-router-dom";
 import * as contact_form_ic from "@assets/img/contact_form_ic";
 import YoutubePopupComponent from "@component/YoutubePopupComponent";
+import ThanksPopupComponent from "@component/ThanksPopupComponent";
 import "./LandingScreen.css";
 import Carousel from 'react-multi-carousel';
 import * as green_logos from "@assets/img/blue_logo";
@@ -25,12 +26,14 @@ import { Link as ScrollLink, Element } from 'react-scroll'
 
 
 export interface LandingScreenProps extends BaseProps {
+    requestCalendarSuccessed:boolean,
     submitContactForm:(contactForm:CalendarContactModel) => void
 }
 
 const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: LandingScreenProps) => {
 
     const [visibleOfNavbar, setVisibleOfNavbar] = React.useState(false);
+    const [visibleOfSucDlg, setVisibleOfSucDlg] = React.useState(false);
     const [videoShow, setVideoShow] = React.useState(false);
     const [contactForm, setContactForm] = React.useState(new CalendarContactModel());
     const {t} = useTranslation();
@@ -50,6 +53,12 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
         props.submitContactForm(contactForm)
     }
     let carouselRef: Carousel | null;
+
+    React.useEffect(() => {
+        if(props.requestCalendarSuccessed) {
+            setVisibleOfSucDlg(true);
+        }
+    }, [props.requestCalendarSuccessed]);
 
     return (
         <div className="app-container mx-auto" style={{ fontFamily: "Barlow" }}>
@@ -164,7 +173,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                     components={{ bold: <strong /> }}
                                 />
                             </div>
-                            <div className="text-primary font-bold text-55p leading-none mt-30p 
+                            <div className="text-primary font-bold text-55p leading-55p mt-30p 
                                 2xl:mt-26p
                                 xl:mt-18p xl:leading-55p
                                 lg:leading-55p
@@ -191,7 +200,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         <div className="flex flex-1 
                             lg:flex-col
                             sm:flex-col">
-                            <p className="font-bold text-black text-18p flex-1 leading-none 
+                            <p className="font-bold text-black text-18p flex-1 leading-18p
                                 xl:text-28p xl:leading-28p
                                 lg:text-center lg:text-36p lg:leading-36p
                                 sm:text-18p sm:leading-24p">
@@ -582,6 +591,14 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                     />
                 ) : null
             }
+            {
+                visibleOfSucDlg ? (
+                    <ThanksPopupComponent
+                        onClose={() => setVisibleOfSucDlg(false)}
+                    />
+                ) : null
+            }
+            
             {/* footer */}
             <div className="bg-primary h-263p flex
                 xl:h-560p

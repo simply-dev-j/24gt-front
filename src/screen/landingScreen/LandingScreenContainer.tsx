@@ -6,7 +6,7 @@ import {ACTION_API_CONTACT_FORM_SUBMIT} from "../../store/thunk/contactFormThunk
 
 const mapStateToProps = (state:RootState) => {
     return {
-
+        requestCalendarSuccessed:state.app.requestCalendarSuccessed
     }
 }
 
