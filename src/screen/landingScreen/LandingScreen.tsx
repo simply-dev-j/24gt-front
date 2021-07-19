@@ -394,7 +394,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             onChange={e => setContactForm({...contactForm, email:e.target.value})}
                         />
                         <button 
-                            className="py-26p mt-30p text-xl text-white bg-secondary text-21p font-semibold rounded
+                            className="py-26p mt-30p text-xl text-black bg-secondary text-21p font-semibold rounded
                                 xl:text-28p xl:py-45p
                                 lg:mt-40p lg:h-105p
                                 sm:text-18p sm:p-2 sm:h-auto"
@@ -454,7 +454,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                 {t('landing.what_other_company_say_footer')}
                             </p>
                             <ScrollLink to="contact_form" smooth={'easeOutQuart'} duration={1000} className="inline-block mt-43p mb-5 cursor-pointer xl:mt-80p lg:mt-43p sm:w-full">
-                                <div className="text-21p font-extrabold text-white py-24p px-35p rounded bg-secondary h-1 flex items-center justify-center
+                                <div className="text-21p font-extrabold text-black py-24p px-35p rounded bg-secondary h-1 flex items-center justify-center
                                     xl:text-28p xl:px-65p xl:py-50p xl:leading-28p
                                     lg:px-60p lg:py-42p lg:text-28p
                                     sm:text-15p sm:p-3 sm:h-auto">
@@ -562,7 +562,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                                 />
                             </div>
                         </div>
-                        <div className="p-4 mt-57p text-21p font-extrabold text-white bg-secondary w-full text-center cursor-pointer rounded 
+                        <div className="p-4 mt-57p text-21p font-extrabold text-black bg-secondary w-full text-center cursor-pointer rounded 
                             2xl:w-max
                             xl:text-28p xl:px-65p xl:py-40p xl:leading-28p xl:mt-135p
                             lg:mt-135p lg:py-30p lg:text-28p
