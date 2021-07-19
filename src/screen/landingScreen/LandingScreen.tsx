@@ -80,33 +80,34 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                     <div className="items-center flex justify-start 
                         xl:order-last xl:w-full xl:justify-between
                         sm:mt-5">
-                        <Link to="/" >
+                        <div>
                             <div className="text-xl text-gray-400 mx-4">Bekannt aus…</div>
-                        </Link>
-                        <Link to="/" >
+                        </div>
+                        <div>
                             <img src={logo_ard} alt={"logo_ard"} />
-                        </Link>
-                        <Link to="/" className="ml-4">
+                        </div>
+                        <div className="ml-4">
                             <img src={vogue} alt={"vogue"} />
-                        </Link>
-                        <Link to="/" className="ml-4">
+                        </div>
+                        <div className="ml-4">
                             <img src={brandeins} alt={"brandeins"} />
-                        </Link>
-                        <Link to="/" className="ml-4">
+                        </div>
+                        <div className="ml-4">
                             <img src={logo_waz} alt={"waz"} />
-                        </Link>
+                        </div>
                     </div>
                     <div className="hidden 2xl:block">
-                        <button onClick={() => {
+                        {/* <button onClick={() => {
                             setVisibleOfNavbar(!visibleOfNavbar)
                         }}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
-                <div className={"flex flex-1 2xl:flex-col " + (!visibleOfNavbar ? "2xl:hidden" : "")}>
+                {/* TODO: Since navigation button is not shown, below action section will not show anymore. */}
+                <div className={"hidden flex flex-1 2xl:flex-col " + (!visibleOfNavbar ? "2xl:hidden" : "")}>
                     {/* Action section */}
                     <div className="items-center flex justify-end flex-1 2xl:flex-col">
                         <Link to="/" className="inline-block mr-1">
