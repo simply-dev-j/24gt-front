@@ -72,9 +72,10 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                 {/* Logo section */}
                 <div className="flex justify-between items-center 2xl:w-full xl:flex-wrap">
                     <div>
-                        <Link to="/" >
+                        {/* TODO: if language is switchable, all external links should be stored in i18n resource file in case of that  */}
+                        <a href="https://www.24-gute-taten.de/" target="_blank" rel="noreferrer">
                             <img src={logo} alt={"logo"} className="sm:w-14"/>
-                        </Link>
+                        </a>
                     </div>
                     <div className="items-center flex justify-start 
                         xl:order-last xl:w-full xl:justify-between
@@ -611,19 +612,35 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         xl:mt-0 xl:text-center xl:w-full
                         xl:text-32p
                         sm:text-18p sm:mt-5">
-                        {t('footer.Impressum')} | {t('footer.data_protection')}
+                        <a href="https://www.24-gute-taten.de/impressum" target="_blank" rel="noreferrer" className="hover:underline">
+                            {t('footer.Impressum')}
+                        </a>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="https://www.24-gute-taten.de/datenschutzerklaerung" target="_blank" rel="noreferrer" className="hover:underline">
+                            {t('footer.data_protection')}
+                        </a>
                     </div>
                     {/* logos */}
                     <div className="flex flex-col items-center justify-self-center
                          xl:order-first">
                         <div>
-                            <img className="w-92p h-92p xl:w-127p xl:h-127p sm:w-92p sm:h-92p" src={footer_logos.logo}/>
+                            <a href="https://www.24-gute-taten.de/">
+                                <img className="w-92p h-92p xl:w-127p xl:h-127p sm:w-92p sm:h-92p" src={footer_logos.logo}/>
+                            </a>
                         </div>
                         <div className="flex mt-23p">
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_facebook}/></a>
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_instagram}/></a>
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_youtube}/></a>
-                            <a className="mx-5p" href="#"><img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_twitter}/></a>
+                            <a className="mx-5p" href="https://www.facebook.com/24guteTaten" target="_blank" rel="noreferrer">
+                                <img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_facebook}/>
+                            </a>
+                            <a className="mx-5p" href="https://www.instagram.com/24guteTaten/" target="_blank" rel="noreferrer">
+                                <img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_instagram}/>
+                            </a>
+                            <a className="mx-5p" href="https://www.youtube.com/user/24guteTaten" target="_blank" rel="noreferrer">
+                                <img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_youtube}/>
+                            </a>
+                            <a className="mx-5p" href="https://twitter.com/24guteTaten" target="_blank" rel="noreferrer">
+                                <img className="w-42p h-42p xl:w-56p xl:h-56p sm:w-42p sm:h-42p" src={footer_logos.logo_twitter}/>
+                            </a>
                         </div>
                     </div>
                     {/* end logos */}
@@ -631,7 +648,9 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                         xl:mt-0 xl:text-center xl:w-full
                         xl:text-32p
                         sm:text-18p sm:mt-5">
-                        {t('footer.contact')}
+                        <a href="https://www.24-gute-taten.de/kontakt" target="_blank" rel="noreferrer" className="hover:underline">
+                            {t('footer.contact')}
+                        </a>
                     </div>
                 </div>
             </div>
