@@ -625,7 +625,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                     <div className="flex flex-col items-center justify-self-center
                          xl:order-first">
                         <div>
-                            <a href="https://www.24-gute-taten.de/">
+                            <a href="https://www.24-gute-taten.de/" target="_blank" rel="noreferrer">
                                 <img className="w-92p h-92p xl:w-127p xl:h-127p sm:w-92p sm:h-92p" src={footer_logos.logo}/>
                             </a>
                         </div>
