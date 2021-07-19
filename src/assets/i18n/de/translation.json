@@ -32,7 +32,9 @@
         "last_year_project_nature": "419,553 Quadratmeter<br> verödete Palmölplantage<br> in Malaysia renaturiert",
         "last_year_project_health": "80,277 Ruhepausen für<br> Eltern von krebskranken<br> Kindern in Deutschland",
         "last_year_project_education": "20.977 Stunden Vorschule<br> für geflüchtete Kinder in<br> Jordanien",
-        "last_year_project_nutrition": "4.816 Meter<br> Wasserleitung für<br> Gemeinden im Irak"
+        "last_year_project_nutrition": "4.816 Meter<br> Wasserleitung für<br> Gemeinden im Irak",
+        "thanks_message": "Vielen Dank für Ihre Bestellung.<br/>Wir werden Ihnen diese schnellstmöglich zusenden.",
+        "close": "Schließen"
     },
     "footer": {
         "Impressum": "Impressum",
