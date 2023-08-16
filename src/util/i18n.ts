@@ -29,11 +29,11 @@ const initializeI18n = (fallbackLocale:string = 'de') => {
             interpolation: {
                 escapeValue: false,
                 prefix: "{",
-                suffix: "}",
+                suffix: "}"
             },
             react: {
                 transSupportBasicHtmlNodes: true,
-                transKeepBasicHtmlNodesFor: ['br','strong', 'i'],
+                transKeepBasicHtmlNodesFor: ['br','strong', 'i']
             }
         });
 }

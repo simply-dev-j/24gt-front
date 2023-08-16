@@ -8,8 +8,8 @@ const store = configureStore({
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             immutableCheck:false,
-            serializableCheck: false,
-        }),
+            serializableCheck: false
+        })
 })
 
 export type AppDispatch = typeof store.dispatch;

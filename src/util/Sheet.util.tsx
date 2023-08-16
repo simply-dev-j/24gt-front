@@ -14,7 +14,7 @@ export default class SheetUtil {
 
         await doc.useServiceAccountAuth({
             client_email: keys.client_email,
-            private_key: keys.private_key,
+            private_key: keys.private_key
         })
         try{
             await doc.loadInfo(); // loads document properties and worksheets

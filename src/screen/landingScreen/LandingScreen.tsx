@@ -154,7 +154,7 @@ const LandingScreen: React.FunctionComponent<LandingScreenProps> = (props: Landi
                             md:mt-m433p md:w-170p md:h-170p md:mr-m21p md:text-22p
                             sm:text-8p sm:leading-none sm:w-70p sm:h-70p sm:mt-m433p"
                             style={{
-                                backgroundImage:`url(${green_circle})`,
+                                backgroundImage:`url(${green_circle})`
                             }}
                         >
                             kostenfreies<br/>

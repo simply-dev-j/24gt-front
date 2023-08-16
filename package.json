@@ -57,12 +57,14 @@
     "devDependencies": {
         "@types/react-router-dom": "^5.1.7",
         "@types/react-scroll": "^1.8.2",
-        "autoprefixer": "^9",
+        "autoprefixer": "^9.8.6",
         "craco-alias": "^3.0.1",
-        "postcss": "^7",
-        "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+        "postcss": "^7.0.36",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
     },
     "react-dotenv": {
-        "whitelist": ["GOOGLE_SHEET_ID"]
+        "whitelist": [
+            "GOOGLE_SHEET_ID"
+        ]
     }
 }
